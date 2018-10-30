@@ -1,0 +1,17 @@
+
+
+
+
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group">
+    <label for="choice">Choose your chracter</label>
+    <!-- "multiple" can be added -->
+    <select ngModel name="choice" id="choice" class="form-control">
+      <option value=""></option>
+      <option value="dwarf">dwarf</option>
+      <option value="fairy">fairy</option>
+      <option value="lizard">lizard</option>
+    </select>
+  </div>  
+  <a routerLink="/story1" class="btn btn-success" (click)="createCharacter(f.value)">Start</a>
+</form>
